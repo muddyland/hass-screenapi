@@ -8,10 +8,10 @@ This app was created to allow me to turn off my top monitor based on the pressen
 This has only been tested on a Pi, but I assume it could apply to other Linux OSes as well. If your OS has a command to turn off the monitor, you can change the commands that run for on_command and off_command variables in the screenapi/views.py file. 
 
 # Install
-* Make sure you have pip3 installed: sudo apt install python3-pip
-* pip3 install django
+* Make sure you have pip3 installed: <pre>sudo apt install python3-pip </pre>
+* <pre> pip3 install django </pre>
 * Change "SECRET_KEY" in screenapi/settings.py to something strong, prefferably random, this will be the password
-* python3 manage.py runserver 0:8000
+* <pre>python3 manage.py runserver 0:8000</pre>
 
 Head over to Home Assistant and add the following to your configuration.yaml:
 <pre>
