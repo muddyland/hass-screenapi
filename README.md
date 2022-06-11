@@ -14,7 +14,7 @@ This has only been tested on a Pi, but I assume it could apply to other Linux OS
 * python3 manage.py runserver 0:8000
 
 Head over to Home Assistant and add the following to your configuration.yaml:
-
+<pre>
 switch:
   - platform: rest
     resource: http://{IP_OF_MACHINE}:8000/monitor/
@@ -24,5 +24,5 @@ switch:
     headers: 
       AUTH: {VALUE_FROM_SECRET_KEY}
     is_on_template: "{{ value_json.status }}"
-    
+</pre>
 Restart Home assistant and you should have a shinny new switch, which controls your Raspberry Pi Monitor! 
